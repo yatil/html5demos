@@ -47,15 +47,10 @@ function spans($list) {
 <body>
 <section id="wrapper">
     <header>
-      <h1><abbr>HTML</abbr> 5 Demos and Examples</h1>
+      <h1><abbr>HTML5</abbr> &amp; <abbr>CSS3</abbr><br>Demos and Examples</h1>
     </header>
     <article>
-      <p><abbr>HTML</abbr> 5 experimentation and demos I've hacked together. Click on the browser support icon or the technology tag to filter the demos (the filter is an <code>OR</code> filter).</p>
-      <section>
-        <a href="http://introducinghtml5.com" id="ih5">
-          <p><strong>Introducing HTML5</strong> by Bruce Laweson &amp; Remy Sharp is the first full length book dedicated to HTML5.</p><p>Get it now and kick some HTML5 ass!</p>
-        </a>
-      </section>
+
       <p id="tags" class="tags">
         
       </p>
@@ -80,7 +75,7 @@ function spans($list) {
       
 	<p>All content, code, video and audio is <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/">Creative Commons Share Alike 2.0</a></p>
     </article>
-    <footer><a id="built" href="http://twitter.com/rem">@rem built this</a></footer> 
+    <footer><p><a class="built" href="http://twitter.com/rem">@rem built this</a> &amp; <a class="built" href="http://twitter.com/yatil">@yatil forked it</a></p></footer> 
 </section>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
@@ -121,15 +116,5 @@ $('#tags').append('<strong>Filter demos:</strong> ' + html.sort().join(''));
 // });
 
 </script>
-<a href="http://github.com/remy/html5demos"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-<script>
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script>
-try {
-var pageTracker = _gat._getTracker("UA-1656750-18");
-pageTracker._trackPageview();
-} catch(err) {}</script>
 </body>
 </html>

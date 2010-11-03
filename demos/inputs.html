@@ -1,0 +1,29 @@
+<style>
+input {
+	display:none;
+	width:80%;
+}
+
+#text {
+	display:block;
+}
+</style>
+<title>New Input Elements</title>
+    <article>
+	<p>&lt;input 
+      <select id="type" onchange="$('input').hide();$('#' + this.value).show();">
+      	<option value="text" selected>type="text"</option>
+		<option value="text-place">type="text" placeholder="Text eingeben"</option>
+		<option value="search">type="search" placeholder="ET, Bad Boys, ect."</option>
+		<option value="number">type="number" step="5" min="-100" max="100"</option>
+		<option value="range">type="range" step="5" min="-20" max="20"</option>
+      </select>&gt;</p>
+	<p>
+		<input id="text" type="text">
+		<input id="text-place" type="text" placeholder="Text eingeben">
+		<input id="search" type="search" placeholder="ET, Bad Boys, ect.">
+		<input id="number" type="number" step="5" min="-100" max="100">
+		<input id="range" type="range" step="5" min="-20" max="20" onchange="$('#ausgabe').text(this.value);">
+	</p>
+	<p id="ausgabe"></p>
+    </article>

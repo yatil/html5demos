@@ -3,8 +3,34 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <article>
       <p>Finding your location: <span id="status">checking...</span></p>
+<p id="where"></p>
     </article>
 <script>
+
+function writegeo(thelocation) {
+/*	console.log(thelocation.query.results.place);*/
+	 document.querySelector('#where').innerHTML = thelocation.query.results.place.name + ', ' + thelocation.query.results.place.postal.content + ' ' + thelocation.query.results.place.locality1.content + ', ' + thelocation.query.results.place.country.content;
+	
+	var locCoords = [
+	        new google.maps.LatLng(thelocation.query.results.place.boundingBox.northEast.latitude, thelocation.query.results.place.boundingBox.northEast.longitude),
+	        new google.maps.LatLng(thelocation.query.results.place.boundingBox.northEast.latitude, thelocation.query.results.place.boundingBox.southWest.longitude),
+	        new google.maps.LatLng(thelocation.query.results.place.boundingBox.southWest.latitude, thelocation.query.results.place.boundingBox.southWest.longitude),
+			new google.maps.LatLng(thelocation.query.results.place.boundingBox.southWest.latitude, thelocation.query.results.place.boundingBox.northEast.longitude)
+	    ];
+
+	    thelocationBox = new google.maps.Polygon({
+	      paths: locCoords,
+	      strokeColor: "#FF0000",
+	      strokeOpacity: 0.35,
+	      strokeWeight: 3,
+	      fillColor: "#FF0000",
+	      fillOpacity: 0.1
+	    });
+
+	   thelocationBox.setMap(map);
+	
+}
+
 function success(position) {
   var s = document.querySelector('#status');
   
@@ -25,19 +51,24 @@ function success(position) {
   
   var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
   var myOptions = {
-    zoom: 15,
+    zoom: 12,
     center: latlng,
     mapTypeControl: false,
     navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+  map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
   
   var marker = new google.maps.Marker({
       position: latlng, 
       map: map, 
       title:"You are here!"
   });
+var geosearch = document.createElement('script');
+  geosearch.src = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20geo.places%20where%20woeid%20in%20(%0A%20%20select%20place.woeid%20from%20flickr.places%20where%20lat%3D' + position.coords.latitude + '%20and%20lon%3D' + position.coords.longitude + '%0A)&format=json&diagnostics=true&callback=writegeo';
+
+  document.querySelector('article').appendChild(geosearch);
+
 }
 
 function error(msg) {

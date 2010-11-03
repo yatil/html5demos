@@ -1,46 +1,18 @@
 [
   {
-    "desc": "dataset (data-* attributes)",
-    "url": "dataset",
-    "tags": "dataset",
-    "support": {
-      "live": "chrome",
-      "nightly": "safari"
-    }
-  },
-  {
-    "desc": "History API using pushState",
-    "url": "history",
-    "notes": "Uses onpopstate event",
-    "tags": "history",
-    "support": {
-      "live": "chrome safari",
-      "nightly": "firefox"
-    }
-  },
-  {
     "desc": "Drag files directly into your browser",
     "url": "file-api",
     "note": "Not directly part of HTML5",
-    "tags": "file-api dnd",
+    "tags": "html file-api dnd",
     "support": {
       "live": "firefox",
       "nightly": "chrome"
     }
   },
   {
-    "desc": "Simple chat client",
-    "url": "web-socket",
-    "tags": "websocket",
-    "support": {
-      "live": "safari chrome",
-      "nightly": "firefox opera"
-    }
-  },
-  {
     "desc": "Two videos playing in sync",
     "url": "two-videos",
-    "tags": "video",
+    "tags": "html video",
     "support": {
       "live": "firefox opera safari chrome",
       "nightly": "ie"
@@ -49,7 +21,7 @@
   {
     "desc": "Interactive canvas gradients",
     "url": "canvas-grad",
-    "tags": "canvas",
+    "tags": "html canvas",
     "support": {
       "live": "firefox opera safari chrome",
       "nightly": "ie"
@@ -58,7 +30,7 @@
   {
     "desc": "Canvas & Video",
     "url": "video-canvas",
-    "tags": "video canvas",
+    "tags": "html video canvas",
     "support": {
       "live": "firefox opera safari chrome",
       "nightly": "ie"
@@ -67,7 +39,7 @@
   {
     "desc": "Video",
     "url": "video",
-    "tags": "video",
+    "tags": "html video",
     "support": {
       "live": "firefox opera safari chrome",
       "nightly": "ie"
@@ -76,7 +48,7 @@
   {
     "desc": "Canvas",
     "url": "canvas",
-    "tags": "canvas",
+    "tags": "html canvas",
     "support": {
       "live": "firefox opera safari chrome",
       "nightly": "ie"
@@ -85,7 +57,7 @@
   {
     "desc": "Content Editable",
     "url": "contenteditable",
-    "tags": "contenteditable storage",
+    "tags": "html contenteditable storage",
     "support": {
       "live": "ie firefox opera safari chrome"
     }
@@ -93,113 +65,28 @@
   {
     "desc": "Geolocation",
     "url": "geo",
-    "tags": "geolocation",
+    "tags": "html geolocation",
     "note": "Works on Safari Mobile too",
     "support": {
       "live": "firefox chrome safari opera"
     }
-  },
+  }	,
   {
-    "desc": "postMessage",
-    "url": "postmessage",
-    "note": "same domain",
-    "tags": "postMessage",
+    "desc": "Background Canvas",
+    "url": "background-canvas",
+    "tags": "html canvas video",
     "support": {
-      "live": "ie firefox opera safari chrome"
+      "live": "firefox chrome safari opera",
+      "nightly": "ie"
     }
-  },
-  {
-    "desc": "postMessage",
-    "url": "postmessage2",
-    "tags": "postMessage",
-    "note": "cross domain",
-    "support": {
-      "live": "ie firefox opera safari chrome"
-    }
-  },
-  {
-    "desc": "drag and drop",
-    "url": "drag",
-    "tags": "dnd",
-    "support": {
-      "live": "ie firefox safari chrome"
-    }
-  },
-  {
-    "desc": "drag anything",
-    "url": "drag-anything",
-    "tags": "dnd",
-    "support": {
-      "live": "ie firefox safari chrome"
-    }
-  },
-  {
-    "desc": "offline detection",
-    "url": "offline",
-    "tags": "offline events",
-    "note": "Works on Safari Mobile too",
-    "support": {
-      "live": "firefox opera"
-    }
-  },
-  {
-    "desc": "navigator.onLine tests",
-    "url": "nav-online",
-    "tags": "offline",
-    "note": "Doesn't use events, only polls",
-    "support": {
-      "live": "firefox opera ie"
-    }
-  },
-  {
-    "desc": "on/offline event tests",
-    "url": "offline-events",
-    "notes": "Opera &amp; Firefox - requires \"Work Offline\"",
-    "tags": "offline events",
-    "support": {
-      "live": "firefox opera"
-    }
-  },
-  {
-    "desc": "offline application using the manifest",
-    "url": "offlineapp",
-    "note": "FF 3.6 is still buggy - doesn't request manifest after initial load",
-    "tags": "offline manifest",
-    "support": {
-      "live": "firefox safari chrome opera"
-    }
-  },
-  {
-    "desc": "Storage",
-    "url": "storage",
-    "tags": "storage",
-    "support": {
-      "live": "ie firefox opera safari chrome"
-    }
-  },
-  {
-    "desc": "Web SQL Database Storage",
-    "url": "database",
-    "tags": "sql-database",
-    "support": {
-      "live": "safari chrome opera"
-    }
-  },
-  {
-    "desc": "Web SQL Database - rollback test",
-    "url": "database-rollback",
-    "tags": "sql-database",
-    "support": {
-      "live": "safari chrome opera"
-    }
-  },
-  {
-    "desc": "Web Workers",
-    "url": "worker",
-    "tags": "workers",
-    "note": "watch out - uses a lot of CPU! <a href=\"non-worker\">example without - will hang your browser</a>",
-    "support": {
-      "live": "safari chrome firefox opera"
-    }
-  }
+  }	,
+	  {
+	    "desc": "New Input Elements",
+	    "url": "inputs",
+	    "tags": "html form input",
+	    "support": {
+	      "live": "chrome safari opera",
+	      "nightly": "firefox ie"
+	    }
+	  }
 ]

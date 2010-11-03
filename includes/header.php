@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=620" />
 <title>HTML5 Demo: <?=$title?></title>
 <link rel="stylesheet" href="/css/html5demos.css" type="text/css" />
+<script src="/js/jquery.js">
 <?php if (!$manifest) : ?><script src="/js/h5utils.js"></script><?php endif ?>
 </head>
 <body>
