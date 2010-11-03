@@ -1,0 +1,43 @@
+<title>Rounded Corners, Gradients, Box Shadow</title>
+    <article>
+		<style>#targetbox {
+	margin:50px;
+	padding:50px;
+	border:3px solid #300;
+	background-color: rgba(255,0,0,0.2);
+}
+
+p.box-shadow input {
+	width:3em;
+}
+
+p.box-shadow input:last-child, input {
+	width:6em;
+}
+</style>
+<script>
+	function addShadow() {
+		var s = $('#box-x').val() + 'px ' + $('#box-y').val() + 'px ' + $('#box-gradient').val() + 'px ' + $('#box-color').val();
+		$('#targetbox').css('-webkit-box-shadow',s).css('-moz-box-shadow',s).css('box-shadow',s);
+	}
+	
+	function addRadius() {
+		var s = $('#radius').val() + 'px';
+		$('#targetbox').css('-webkit-border-radius',s).css('-moz-border-radius',s).css('border-radius',s);
+	}
+	
+	function addGradient() {
+		var moz = '-moz-linear-gradient(top, ' + $('#fromcolor').val() + ', ' + $('#tocolor').val() + ')';
+		var webkit = '-webkit-gradient(linear,left top,left bottom,color-stop(0, ' + $('#fromcolor').val() + '),color-stop(1, ' + $('#tocolor').val() + '))';
+		$('#targetbox').css('background-image',moz);
+		$('#targetbox').css('background-image',webkit);
+	}
+</script>
+	<p class="box-shadow">box-shadow: <input id="box-x" type="number" step="1" min="0" max="20" value="0" onchange="addShadow()" onclick="addShadow()">px <input id="box-y" type="number" step="1" min="0" max="20" value="0" onchange="addShadow()" onclick="addShadow()">px <input id="box-gradient" type="number" step="1" min="0" max="50" value="10" onchange="addShadow()" onclick="addShadow()">px <input id="box-color" type="color" onchange="addShadow()" onclick="addShadow()" value="#333333">;</p>
+	<p class="border-radius">border-radius: <input id="radius" type="number" step="1" min="0" max="60" value="15" onchange="addRadius()" onclick="addRadius()">px;</p>
+	<p class="gradient">background-image: linear-gradient(<input id="fromcolor" type="color" onchange="addGradient()" onclick="addGradient()" value="blue">, <input id="tocolor" type="color" onchange="addGradient()" onclick="addGradient()" value="#aaa">);</p>
+    	<div id="targetbox">
+    		Style me!
+    	</div>
+    </article>
+<script>addShadow();addRadius();addGradient();</script>

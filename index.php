@@ -40,14 +40,14 @@ function spans($list) {
 <head>
 <meta charset=utf-8 />
 <meta name="viewport" content="width=620" />
-<title>HTML5 Demos and Examples</title>
+<title>yatil’s Lab</title>
 <link rel="stylesheet" href="/css/html5demos.css" type="text/css" />
 <script src="js/h5utils.js"></script>
 </head>
 <body>
 <section id="wrapper">
     <header>
-      <h1><abbr>HTML5</abbr> &amp; <abbr>CSS3</abbr><br>Demos and Examples</h1>
+      <h1>yatil’s Lab:<br><abbr>HTML5</abbr> &amp; <abbr>CSS3</abbr><br>Demos and Examples</h1>
     </header>
     <article>
 

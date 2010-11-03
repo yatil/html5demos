@@ -1,0 +1,132 @@
+<style>
+	code {
+		font-weight: normal;
+		font-family: "Anonymous Pro", Curier, sans-serif;
+	}
+	
+	div.box {
+		position: relative;	
+		height: 450px;
+		margin: 30px 10px;
+	}
+	
+	div.box div {
+		width: 125px;
+		height: 125px;
+		opacity: .8;
+		background-color: #305090;
+		color: #fff;
+		position: absolute;
+		top: 60px;
+		left: 60px;
+	}
+	
+	.verschieben {
+		-o-transform: translate(150px, 150px);
+		-moz-transform: translate(150px, 150px);
+		-webkit-transform: translate(150px, 150px);
+		transform: translate(150px, 150px);
+	}
+	
+	.drehen {
+		-o-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	
+	.skalieren {
+		-o-transform: scale(1.5);
+		-moz-transform: scale(1.5);
+		-webkit-transform: scale(1.5);
+		transform: scale(1.5);
+	}
+	
+	.skew {
+		-o-transform: skew(15deg, 15deg);
+		-moz-transform: skew(15deg, 15deg);
+		-webkit-transform: skew(15deg, 15deg);
+		transform: skew(15deg, 15deg);
+	}
+	
+	.threesixty       { -webkit-transition: -webkit-transform 1s linear; }
+	.threesixty:hover { -webkit-transform: rotate(360deg); }
+	
+	.alles {
+		-o-transform: translate(100px, 100px) scale(1.5) rotate(45deg) skew(15deg, 15deg);
+		-moz-transform: translate(100px, 100px) scale(1.5) rotate(45deg) skew(15deg, 15deg);
+		-webkit-transform: translate(100px, 100px) scale(1.5) rotate(45deg) skew(15deg, 15deg);
+		transform: translate(100px, 100px) scale(1.5) rotate(45deg) skew(15deg, 15deg);
+	}
+	
+	.wobble {
+		-webkit-animation: wobble 2s infinite;
+		-webkit-animation-delay: 1s;
+	}
+	
+	@-webkit-keyframes 'wobble' {
+	
+	    0% {
+	      left: 100px;
+	      -webkit-animation-timing-function: ease-out;
+	    }
+	
+	    40% {
+	      left: 150px;
+	      -webkit-animation-timing-function: ease-out;
+	    }
+	
+	    60% {
+	      left: 75px;
+	      -webkit-animation-timing-function: ease-out;
+	    }
+	
+	    100% {
+	      left: 100px;
+	      -webkit-animation-timing-function: ease-out;
+	    }
+	
+	  }
+</style>
+<title>Transformations/ Transitions/ Animations</title>
+    <article>
+		<div class="box">
+			<h2>Verschieben <code>transform: translate(150px, 150px);</code></h2>
+			<div>ohne</div>
+			<div class="verschieben">mit</div>
+		</div>
+
+		<div class="box">
+			<h2>Drehen</h2>
+			<div>ohne</div>
+			<div class="drehen">mit</div>
+		</div>
+
+		<div class="box">
+			<h2>Skalieren</h2>
+			<div>ohne</div>
+			<div class="skalieren">mit</div>
+		</div>
+
+		<div class="box">
+			<h2>Skew</h2>
+			<div>ohne</div>
+			<div class="skew">mit</div>
+		</div>
+
+		<div class="box">
+			<h2>Alle Transformationen auf einmal</h2>
+			<div>ohne</div>
+			<div class="alles">mit</div>
+		</div>
+
+		<div class="box">
+			<h2>Wobble</h2>
+			<div class="wobble">Wobble</div>
+		</div>
+
+		<div class="box">
+			<h2>Drehen</h2>
+			<div class="threesixty">:hover zum drehen</div>
+		</div>
+    </article>

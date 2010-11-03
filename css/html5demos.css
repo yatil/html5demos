@@ -229,7 +229,7 @@ body.view-source #view-source {
 }
 
 #demos .tags {
-  width: 140px;
+  width: 200px;
 }
 
 .tags span {
@@ -242,6 +242,7 @@ body.view-source #view-source {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   cursor: pointer;
+  white-space:nowrap;
 }
 
 .tags span:hover,

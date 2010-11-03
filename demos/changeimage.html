@@ -1,0 +1,36 @@
+<style>
+	img {
+		display: block;
+	}
+
+	div {
+		height: 600px;
+	}
+
+	#t1 {
+		-webkit-transform: rotate(2.5deg); 
+		-webkit-transition: -webkit-transform 1s;
+	}
+</style>
+<script>
+	var click=0;
+	function inflate(e) {
+		e.style.webkitTransform = 'rotate(2.5deg) scale(1)';
+	}
+</script>
+<title>Canvas</title>
+    <article>
+    	<div>
+			<img 
+				src="http://img.tweetimag.es/i/yatil_o" 
+				alt="Portrait" 
+				id="t1" 
+				onwebkittransitionend="
+					if (this.src.indexOf('http://img.tweetimag.es/i/yatil_o')>-1) { 
+						if (click) this.src='http://img.tweetimag.es/i/screenorigami_o'; click=0; 
+					} else { 
+						if (click) this.src='http://img.tweetimag.es/i/yatil_o';click=0; 
+					}; inflate(this);"
+				 onclick="document.getElementById('t1').style.webkitTransform = 'rotate(182.5deg) scale(0.000001)'; click=1; return false;" />
+		</div>
+    </article>

@@ -1,0 +1,267 @@
+<style>
+    .barchart {
+      font-weight:bold;
+      position:relative;
+      width:520px;
+      margin:0;
+      padding:0 40px;
+      list-style:none;
+      overflow:hidden;
+      /*-moz-box-shadow: 0px 3px 2px rgba(160,160,160,.8);
+      -webkit-box-shadow: 0px 3px 2px rgba(160,160,160,.8);*/
+      border-bottom: 3px solid #888;
+    }
+
+    .barchart li{
+      width:18px;
+      position: relative;
+      float:left;
+      background:#fc6;
+      height:200px;
+      margin:0;
+      padding:0;
+      border-top:1px solid #eee;
+      width: 60px;
+      margin: 0 3px;
+      -webkit-transition: border-color .4s ease-in, background-color .2s ease-out;
+      -webkit-animation-duration: 1.5s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-box-shadow: 0px 0px 3px rgba(160,160,160,.8);
+      margin-top: 20px;
+    }
+  
+    .barchart li span{
+      position:absolute;
+      left:-99999px;
+      top:0;
+      text-align:center;
+      width:5em;
+      margin:0;
+    }
+    .barchart li:hover {
+      background:#693;
+      border-color:#ddd;
+    }
+    .barchart li:hover span {
+      position: relative;
+      left:5px;
+      z-index:10;
+      top:-1em;
+      width:auto;
+      color:rgba(0,0,0,.7);
+      background:transparent;
+      border:none;
+      -moz-box-shadow:none;
+      -webkit-box-shadow:none;
+      right:0;
+      font-weight:bold;
+      z-index:10;
+      font-family: Helvetica;
+      font-size: 1em;
+    }
+    
+  #plain {
+    margin:1em 0;
+  }
+  #plain ul{
+    margin:0;
+    padding:0;
+    background:#eee;
+    border:1px solid #999;
+    height:100px;
+    width:600px;
+    list-style:none;
+    overflow:hidden;
+  }
+  #plain li{
+    height:100px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    float:left;
+    width:75px;
+    background:#369;
+  }
+  
+  #hiddentext ul{
+    margin:0;
+    padding:0;
+    background:#eee;
+    border:1px solid #999;
+    overflow:hidden;
+    height:100px;
+    width:600px;
+    list-style:none;
+    position:relative;
+  }
+  #hiddentext li{
+    height:100px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    float:left;
+    width:75px;
+    background:#369;
+  }
+  #hiddentext li span{
+    position:absolute;
+    top:1em;
+    left:-9999px;
+  }
+  #hiddentext li:hover,
+  #hiddentext li:focus{
+    background:#69c;
+  }
+  #hiddentext li:hover span{
+    left:1em;
+  }
+  
+  #charty ul{
+    margin:0;
+    padding:0;
+    background:#eee;
+    border:1px solid #999;
+    overflow:hidden;
+    height:100px;
+    width:600px;
+    list-style:none;
+    position:relative;
+  }
+  #charty li{
+    height:100px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    float:left;
+    width:75px;
+    background:#369;
+    border-top:1px solid #eee;
+  }
+  #charty li span{
+    position:absolute;
+    top:1em;
+    left:-9999px;
+  }
+  #charty li:hover{
+    background:#69c;
+  }
+  #charty li:hover span{
+    left:1em;
+  }
+  
+#bar1 {
+	border-top-width: 0px;
+	-webkit-animation-delay-x: .1s;
+	-webkit-animation-name: a1;
+}
+
+@-webkit-keyframes a1 {
+	from { border-top-width: 100px; }
+	60% {border-top-width: 0px; }
+	to { border-top-width: 0px; }
+}
+
+#bar2 {
+	border-top-width: 95px;
+	-webkit-animation-delay-x: .2s;
+	-webkit-animation-name: a2;
+}
+
+@-webkit-keyframes a2 {
+	from { border-top-width: 100px; }
+	10% { border-top-width: 100px; }
+	70% { border-top-width: 95px; }
+	to { border-top-width: 95px; }
+}
+
+#bar3 {
+	border-top-width: 92px;
+	-webkit-animation-delay-x: .3s;
+	-webkit-animation-name: a3;
+}
+
+@-webkit-keyframes a3 {
+	from { border-top-width: 100px; }
+	15% { border-top-width: 100px; }
+	75% { border-top-width: 92px; }
+	to { border-top-width: 92px; }
+}
+
+#bar4 {
+	border-top-width: 41px;
+	-webkit-animation-delay-x: .4s;
+	-webkit-animation-name: a4;
+}
+
+@-webkit-keyframes a4 {
+	from { border-top-width: 100px; }
+	20% { border-top-width: 100px; }
+	80% { border-top-width: 41px; }
+	to { border-top-width: 41px; }
+}
+
+#bar5 {
+	border-top-width: 22px;
+	-webkit-animation-delay-x: .5s;
+	-webkit-animation-name: a5;
+}
+
+@-webkit-keyframes a5 {
+	from { border-top-width: 100px; }
+	25% { border-top-width: 100px; }
+	85% { border-top-width: 22px; }
+	to { border-top-width: 22px; }
+}
+
+#bar6 {
+	border-top-width: 80px;
+	-webkit-animation-delay-x: .6s;
+	-webkit-animation-name: a6;
+}
+
+@-webkit-keyframes a6 {
+	from { border-top-width: 100px; }
+	30% { border-top-width: 100px; }
+	to { border-top-width: 80px; }
+}
+
+#bar7 {
+	border-top-width: 95px;
+	-webkit-animation-delay-x: .7s;
+	-webkit-animation-name: a7;
+}
+
+@-webkit-keyframes a7 {
+	from { border-top-width: 100px; }
+	35% { border-top-width: 100px; }
+	95% { border-top-width: 95px; }
+	to { border-top-width: 95px; }
+}
+
+#bar8 {
+	border-top-width: 83px;
+	-webkit-animation-delay-x: .8s;
+	-webkit-animation-name: a8;
+}
+
+@-webkit-keyframes a8 {
+	from { border-top-width: 100px; }
+	40% { border-top-width: 100px; }
+	to { border-top-width: 83px; }
+}
+
+  
+</style>
+<title>@font-face</title>
+    <article>
+		<ul class="barchart" style="height:120px">
+		      	<li id="bar1"><span>400</span></li>
+		      	<li id="bar2"><span>20</span></li>
+		      	<li id="bar3"><span>30</span></li>
+		      	<li id="bar4"><span>233</span></li>
+		      	<li id="bar5"><span>312</span></li>
+		      	<li id="bar6"><span>78</span></li>
+		      	<li id="bar7"><span>20</span></li>
+		      	<li id="bar8"><span>67</span></li>
+		      </ul>
+	</article>
